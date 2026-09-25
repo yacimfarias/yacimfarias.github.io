@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Yaci Farias — história da ciência, ensino de biologia e educação antiopressiva.' } = Astro.props;
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title} · Yaci Farias</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Yaci Farias — página inicial">Yaci Farias<span aria-hidden="true">✦</span></a>
+      <nav aria-label="Navegação principal">
+        <a href="/sobre">Sobre</a>
+        <a href="/pesquisa">Pesquisa</a>
+        <a href="/publicacoes">Publicações</a>
+        <a href="/projetos">Projetos</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <p>Yaci Maria Marcondes Farias</p>
+      <div class="footer-links">
+        <a href="https://orcid.org/0000-0003-0724-9135" rel="me">ORCID</a>
+        <a href="http://lattes.cnpq.br/2898217903587366">Lattes</a>
+        <a href="https://scholar.google.com/citations?user=Jl84AnUAAAAJ&hl=pt-BR">Google Scholar</a>
+      </div>
+    </footer>
+  </body>
+</html>

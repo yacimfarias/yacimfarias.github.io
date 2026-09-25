@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+const areas = [
+  ['História da ciência', 'Investigações sobre como a ciência é produzida, ensinada e disputada historicamente.'],
+  ['Ensino de biologia', 'Propostas e análises para um ensino de biologia crítico, situado e socialmente responsável.'],
+  ['Educação antiopressiva', 'Práticas pedagógicas voltadas à equidade e à transformação das relações de poder na educação.'],
+  ['Gênero, raça e ciência', 'Histórias de mulheres na ciência, racismo científico, eugenia e suas permanências no ensino.'],
+];
+---
+<Layout title="Pesquisa">
+  <section class="page-intro"><p class="eyebrow">Pesquisa</p><h1>Ciência, sociedade e educação.</h1><p class="lede">Uma pesquisa que conecta arquivos históricos, formação docente e práticas de ensino.</p></section>
+  <section class="section"><div class="cards">{areas.map(([title, text]) => <article class="card"><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+</Layout>

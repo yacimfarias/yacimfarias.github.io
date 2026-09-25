@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+const publications = [
+  ['2026', 'Darwin em disputa no Telegram: teoria da evolução, racismo científico e ensino de biologia', 'Artigo aceito — Revista de Ensino de Biologia da SBEnBio'],
+  ['2023', 'História da Ciência para um Ensino de Biologia antiopressivo: o caso da mulher da ciência Clémence Royer', 'História da Ciência e Ensino: Construindo Interfaces'],
+  ['2023', 'Darwinismo e racismo científico no Brasil', 'Livro organizado — UEFS Editora'],
+  ['2022', 'Como a história da ciência pode contribuir para o ensino de biologia? Um olhar para a história das mulheres', 'Cadernos de Gênero e Tecnologia'],
+  ['2020', 'Uma canção pra você: a música em uma proposta de sequência didática voltada para um ensino de biologia não sexista', 'Revista de Ensino de Biologia da SBEnBio'],
+];
+---
+<Layout title="Publicações">
+  <section class="page-intro"><p class="eyebrow">Produção bibliográfica</p><h1>Ideias que circulam.</h1><p class="lede">Uma seleção inicial da produção acadêmica de Yaci Farias. A bibliografia completa será revisada e estruturada a partir do Lattes e do ORCID.</p></section>
+  <section class="prose"><div class="timeline">{publications.map(([year, title, venue]) => <article><time>{year}</time><div><h3>{title}</h3><p>{venue}</p></div></article>)}</div></section>
+</Layout>

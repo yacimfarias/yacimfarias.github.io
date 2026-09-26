@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: var(--paper); }
 a { color: inherit; text-decoration-thickness: .12em; text-underline-offset: .2em; }
 a:hover { color: #7151a9; }
-.site-header, main, .site-footer { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.site-header, main, .site-footer { width: calc(100% - clamp(32px, 6vw, 128px)); max-width: 1800px; margin: 0 auto; }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; }
 .brand { font-size: 1.15rem; font-weight: 800; letter-spacing: -.03em; text-decoration: none; }
 .brand span { display: inline-block; margin-left: .35rem; color: var(--coral); transform: rotate(12deg); }
